@@ -1,0 +1,39 @@
+Source: libticalcs
+Priority: optional
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Uploaders: Andreas B. Mundt <andi@debian.org>
+Build-Depends: debhelper (>= 9.0.0), libglib2.0-dev, libticables-dev (>= 1.2.0), libtifiles-dev (>= 1.1.0), libticonv-dev (>= 1.1.0), tfdocgen, gettext, autotools-dev, libarchive-dev
+Standards-Version: 3.9.4
+Section: libs
+Homepage: http://lpg.ticalc.org/prj_tilp/
+Vcs-Git: git://git.debian.org/git/debian-science/packages/libticalcs.git
+Vcs-Browser: http://git.debian.org/?p=debian-science/packages/libticalcs.git
+
+Package: libticalcs-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, libticalcs2-11 (= ${binary:Version})
+Pre-Depends: ${misc:Pre-Depends}
+Description: Texas Instruments calculator communication library [development files]
+ The libticalcs is a library providing support for communication with Texas
+ Instruments calculators. It implements the TI protocol for each type of
+ calculator, independently of the link cable used to establish the link.
+ .
+ All graphing calculators from Texas Instruments are supported.
+ .
+ This package provides the development files for the library, static library,
+ required headers and documentation.
+
+Package: libticalcs2-11
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: Texas Instruments calculator communication library
+ The libticalcs is a library providing support for communication with Texas
+ Instruments calculators. It implements the TI protocol for each type of
+ calculator, independently of the link cable used to establish the link.
+ .
+ All graphing calculators from Texas Instruments are supported.
+ .
+ This package provides the shared library.

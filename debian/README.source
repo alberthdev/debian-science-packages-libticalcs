@@ -1,0 +1,9 @@
+libticalcs2 for Debian
+----------------------
+
+Firmware files (ROM Dumpers) have been removed from the upstream
+sources with the command:
+
+         find . -name "*.inc" -o -name "*.asm" -o -name "*.z80" | xargs rm
+
+ -- Andreas B. Mundt <andi@debian.org>  Mon, 10 Jun 2013 15:54:42 +0200

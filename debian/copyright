@@ -1,0 +1,101 @@
+This package was created by Romain LIEVIN <roms@tilp.info> on
+Sun, 14 Jul 2002 11:58:51 +0200.
+
+It was downloaded from <http://lpg.ticalc.org/prj_tilp/>
+
+Original tarball was repacked to remove binary form of ROM dumpers.
+
+Upstream Authors:
+
+    Romain Liévin <roms@tilp.info>
+    Kevin Kofler <Kevin@tigcc.ticalc.org>
+    Benjamin Moody <benjamin@ecg.mit.edu>
+    Tyler Cassidy <tyler@tylerc.org>
+    Sylvain Garsault
+
+Copyright:
+
+    Copyright © 1999-2008 Romain Liévin
+    Copyright © 2003 Sylvain Garsault
+    Copyright © 2004-2006 Kevin Kofler
+    Copyright © 2005-2006 Benjamin Moody
+    Copyright © 2006 Tyler Cassidy
+
+License (except files specified below):
+
+    This package is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This package is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this package; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+Authors (src/romdump_8x/*):
+
+    Benjamin Moody <benjamin@ecg.mit.edu>
+
+Copyright (src/romdump_8x/*):
+
+    Copyright © 2005 Benjamin Moody
+
+License (src/romdump_8x/*):
+
+    Permission is hereby granted, free of charge, to any person
+    obtaining a copy of this software and associated documentation
+    files (the "Software"), to deal in the Software without
+    restriction, including without limitation the rights to use, copy,
+    modify, merge, publish, distribute, and/or sell copies of the
+    Software, and to permit persons to whom the Software is furnished
+    to do so, provided that the above copyright notice(s) and this
+    permission notice appear in all copies of the Software and that
+    both the above copyright notice(s) and this permission notice
+    appear in supporting documentation.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+    NONINFRINGEMENT OF THIRD PARTY RIGHTS.  IN NO EVENT SHALL THE
+    COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR
+    ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR
+    ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR
+    PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+    TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
+
+Copyright (src/gettext.h):
+
+    Copyright (C) 1995-1998, 2000-2002, 2004 Free Software Foundation, Inc.
+
+License (src/gettext.h):
+
+   This program is free software; you can redistribute it and/or modify it
+   under the terms of the GNU Library General Public License as published
+   by the Free Software Foundation; either version 2, or (at your option)
+   any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Library General Public License for more details.
+
+   You should have received a copy of the GNU Library General Public
+   License along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,
+   USA.
+
+On Debian systems, the complete text of the GNU General
+Public License can be found in `/usr/share/common-licenses/GPL-2'.
+
+On Debian systems, the complete text of the GNU Library General
+Public License can be found in `/usr/share/common-licenses/LGPL-2'.
+
+The Debian packaging is © 2002-2009, Romain Liévin <roms@tilp.info>
+and © 2009, Krzysztof Burghardt <krzysztof@burghardt.pl> and
+is licensed under the GPL, see above.
