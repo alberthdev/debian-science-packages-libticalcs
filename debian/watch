@@ -1,0 +1,3 @@
+version=3
+opts=dversionmangle=s/\+dfsg$// \
+http://sf.net/tilp/libticalcs2-(.+)\.tar\.bz2

@@ -1,0 +1,96 @@
+Description: modify libticalcs2 for external binary rom dumpers
+ Modifies libticalcs2 to support external binary ROM dumpers that are not
+ allowed in Debian repositories due to the DFSG. This patch enables checking
+ for those external ROMs. If they are not found, the error will notify the
+ user to download them from upstream's website.
+Author: Benjamin Moody <benjamin.moody@gmail.com>
+Forwarded: no
+Last-Update: 2013-08-08
+
+--- a/src/error.c
++++ b/src/error.c
+@@ -243,6 +243,14 @@
+ 		*message = g_strdup(error_msg);
+ 		break;
+ 
++	case ERR_ROMDUMP_UNINSTALLED:
++		strcpy(error_msg, _("ROM dumping program not found."));
++		strcat(error_msg, "\n");
++		strcat(error_msg,
++		_("Cause: ROM dumpers are not included in this package because the programs needed to build them are not yet included in Debian/Ubuntu. You need to install the libticalcs2-rom-dumpers package (found on the TiLP website, http://lpg.ticalc.org/prj_tilp/) if you want to dump calculator ROMs."));
++		*message = g_strdup(error_msg);
++		break;
++
+ 	case ERR_CALC_ERROR1:	// must be synchronized with cmd89.c (static uint8_t dbus_errors[])
+ 		strcpy(error_msg, _("Msg: hand-held returned an error."));
+ 		strcat(error_msg, "\n");
+--- a/src/calc_84p.c
++++ b/src/calc_84p.c
+@@ -654,7 +654,7 @@
+ 
+ static int		dump_rom_1	(CalcHandle* handle)
+ {
+-	TRYF(rd_send(handle, "romdump.8Xp", romDumpSize84p, romDump84p));
++	TRYF(rd_send(handle, "romdump-usb.8Xp", romDumpSize84p, romDump84p));
+ 
+ 	return 0;
+ }
+--- a/src/calc_89t.c
++++ b/src/calc_89t.c
+@@ -566,7 +566,7 @@
+ 	dusb_cp_del(param);
+ 
+ 	// Send dumping program
+-	TRYF(rd_send(handle, "romdump.89z", romDumpSize89t, romDump89t));
++	TRYF(rd_send(handle, "romdump-usb.89z", romDumpSize89t, romDump89t));
+ 	PAUSE(1000);
+ 
+ 	return 0;
+--- a/src/error.h
++++ b/src/error.h
+@@ -65,6 +65,8 @@
+ 	ERR_INVALID_HANDLE,		// Invalid handle
+ 	ERR_INVALID_PARAMETER,
+ 
++    ERR_ROMDUMP_UNINSTALLED,
++
+ // --- 300 to 349 are reserved for hand-held status (DUSB)
+ 
+ 	ERR_CALC_ERROR2 = 300,	// Hand-held returned an error code
+--- a/src/romdump.c
++++ b/src/romdump.c
+@@ -377,6 +377,7 @@
+ 
+ int rd_send(CalcHandle *h, const char *prgname, uint16_t size, uint8_t *data)
+ {
++#if 0
+ 	char *template, *tempfname;
+ 	int fd, ret;
+ 
+@@ -406,4 +407,26 @@
+ 	g_free(tempfname);
+ 
+ 	return ret;
++#else
++	char *filename;
++	int ret;
++
++	// Transfer program to calc
++	h->busy = 0;
++	filename = g_build_filename("/usr/share/libticalcs2", prgname, NULL);
++
++	if (!g_file_test(filename, G_FILE_TEST_IS_REGULAR))
++	{
++		g_free(filename);
++		return ERR_ROMDUMP_UNINSTALLED;
++	}
++
++	ret = ticalcs_calc_send_var2(h, MODE_NORMAL, filename);
++	g_free(filename);
++
++	(void) size;
++	(void) data;
++
++	return ret;
++#endif
+ }

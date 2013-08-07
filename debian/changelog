@@ -1,6 +1,17 @@
 libticalcs (1.1.8+dfsg-1) UNRELEASED; urgency=low
 
+  * Team maintained in Debian-Science now. (Closes: #678871)
   * New upstream release.
+  * Add patch that supports external ROM dumpers which have been removed
+    for DFSG compliance.
+  * Remove binaries from source tarball.
+  * Created a debug package to provide debugging symbols.
+  * Added support for multiarch.
+  * Added debian/watch to enable upstream update tracking.
+  * Bumped versions of libti* dependencies for compatibility and stability.
+  * Updated to packaging format 3.0, bumped debian/compat to 9 and updated
+    debhelper version to 9.
+  * Bumped Standards-Version to 3.9.4.
 
  -- Andreas B. Mundt <andi@debian.org>  Mon, 10 Jun 2013 15:54:42 +0200
 

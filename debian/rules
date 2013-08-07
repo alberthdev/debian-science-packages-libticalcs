@@ -10,4 +10,13 @@
 #export DH_VERBOSE=1
 
 %:
-	dh $@  --with autotools-dev
+
+	dh $@
+
+override_dh_strip:
+	dh_strip --dbg-package=libticalcs2-11-dbg
+
+override_dh_clean:
+	dh_clean --exclude=build/mingw/ticalcs2.rc~
+
+.PHONY: override_dh_strip
