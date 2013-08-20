@@ -1,3 +1,11 @@
+libticalcs (1.1.8+dfsg1-2) UNRELEASED; urgency=low
+
+  * Remove unnecessary dependency on 'autopoint', use autoreconf.
+  * Fix DFSG cleaning of the upstream sources and clarify reasons.
+  * Modify error message implemented by patch accordingly.
+
+ -- Andreas B. Mundt <andi@debian.org>  Tue, 20 Aug 2013 23:24:58 +0200
+
 libticalcs (1.1.8+dfsg-1) unstable; urgency=low
 
   * Team maintained in Debian-Science now (closes: #678871).
