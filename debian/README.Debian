@@ -1,12 +1,18 @@
 libticalcs2 for Debian
 ----------------------
 
-ROM dumpers, i.e. precompiled firmware has been removed from the
-upstream sources in all the 'src/rom[0-9]*.h' files.
+ROM dumpers, i.e. pre-compiled binaries are removed by a patch from
+the sources to make the package policy compliant for 'main'.
 
 The Z80 ROM dumpers (ti73 - ti86) are built using spasm, which is not
 packaged for Debian.
 The 68k ROM dumpers (ti89 - v200) are built using tigcc/gcc4ti, which
 is also free software, but not packaged for Debian either.
+
+You can compile your own package including the ROM pre-compiled
+ROM dumpers:
+    - fetch the source package
+    - remove the patch that disables the dumpers
+    - build the package and install it
 
  -- Andreas B. Mundt <andi@debian.org>  Mon, 10 Jun 2013 15:54:42 +0200
