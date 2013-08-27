@@ -1,10 +1,10 @@
-libticalcs (1.1.8+dfsg2-2) UNRELEASED; urgency=low
+libticalcs (1.1.8+dfsg2-2) unstable; urgency=low
 
   * Provide original upstream source, but patch away pre-compiled
     binaries to be policy-compliant.
   * Remove unnecessary dependency on 'autopoint', use autoreconf.
 
- -- Andreas B. Mundt <andi@debian.org>  Tue, 20 Aug 2013 23:24:58 +0200
+ -- Andreas B. Mundt <andi@debian.org>  Tue, 27 Aug 2013 19:58:21 +0200
 
 libticalcs (1.1.8+dfsg-1) unstable; urgency=low
 
