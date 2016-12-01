@@ -1,3 +1,10 @@
+libticalcs (1.1.8+dfsg2-3) UNRELEASED; urgency=medium
+
+  * Bump Standards-Version to 3.9.8 (no changes needed).
+  * Switch to secure URI for vcs-field.
+
+ -- Andreas B. Mundt <andi@debian.org>  Thu, 01 Dec 2016 21:19:33 +0300
+
 libticalcs (1.1.8+dfsg2-2) unstable; urgency=low
 
   * Provide original upstream source, but patch away pre-compiled

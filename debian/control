@@ -12,11 +12,11 @@ Build-Depends: debhelper (>= 9.0.0),
                libtifiles-dev (>= 1.1.6),
                pkg-config,
                tfdocgen
-Standards-Version: 3.9.4
+Standards-Version: 3.9.8
 Section: libs
 Homepage: http://lpg.ticalc.org/prj_tilp/
 Vcs-Git: git://anonscm.debian.org/debian-science/packages/libticalcs.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=debian-science/packages/libticalcs.git
+Vcs-Browser: https://anonscm.debian.org/gitweb/?p=debian-science/packages/libticalcs.git
 
 Package: libticalcs-dev
 Section: libdevel
